@@ -48,6 +48,10 @@ public class Converter {
         }
     }
 
+    private static char auxVal(int num){
+        // TODO: finish
+    }
+
     public static String toDecimal(int[] numbers){
         int numberConverted = 0;
         // TODO: Process
@@ -57,8 +61,10 @@ public class Converter {
     public static String toBase(int[] numbers){
         // Devuelve un String porque el número podría ser base 16,
         // entonces para poderlo expresar.
-        String numberConverted = "hola";
-        // TODO: Process
+        String numberConverted = "";
+        while(numbers[0] > 0){
+            numberConverted += auxVal(numbers[0] % numbers[2]);
+        }
         return  numberConverted;
     }
 }
